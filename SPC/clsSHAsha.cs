@@ -3,142 +3,147 @@ using System.Text;
 
 namespace SPC
 {
-    class Class_01
+    public class clsSHAsha
     {
         // Fields
-        private long[] long_0 = new long[64];
-        private long[] long_1 = new long[31];
-        private long[] long_2 = new long[31];
+        private long[] long_0;
+        private long[] long_1;
+        private long[] long_2;
 
         // Methods
-        public Class_01()
+        public clsSHAsha()
         {
-        this.long_1[0] = 1L;
-        this.long_1[1] = 3L;
-        this.long_1[2] = 7L;
-        this.long_1[3] = 15L;
-        this.long_1[4] = 31L;
-        this.long_1[5] = 63L;
-        this.long_1[6] = 127L;
-        this.long_1[7] = 255L;
-        this.long_1[8] = 511L;
-        this.long_1[9] = 1023L;
-        this.long_1[10] = 2047L;
-        this.long_1[11] = 4095L;
-        this.long_1[12] = 8191L;
-        this.long_1[13] = 16383L;
-        this.long_1[14] = 32767L;
-        this.long_1[15] = 65535L;
-        this.long_1[16] = 131071L;
-        this.long_1[17] = 262143L;
-        this.long_1[18] = 524287L;
-        this.long_1[19] = 1048575L;
-        this.long_1[20] = 2097151L;
-        this.long_1[21] = 4194303L;
-        this.long_1[22] = 8388607L;
-        this.long_1[23] = 16777215L;
-        this.long_1[24] = 33554431L;
-        this.long_1[25] = 67108863L;
-        this.long_1[26] = 134217727L;
-        this.long_1[27] = 268435455L;
-        this.long_1[28] = 536870911L;
-        this.long_1[29] = 1073741823L;
-        this.long_1[30] = 2147483647L;
-        this.long_2[0] = 1L;
-        this.long_2[1] = 2L;
-        this.long_2[2] = 4L;
-        this.long_2[3] = 8L;
-        this.long_2[4] = 16L;
-        this.long_2[5] = 32L;
-        this.long_2[6] = 64L;
-        this.long_2[7] = 128L;
-        this.long_2[8] = 256L;
-        this.long_2[9] = 512L;
-        this.long_2[10] = 1024L;
-        this.long_2[11] = 2048L;
-        this.long_2[12] = 4096L;
-        this.long_2[13] = 8192L;
-        this.long_2[14] = 16384L;
-        this.long_2[15] = 32768L;
-        this.long_2[16] = 65536L;
-        this.long_2[17] = 131072L;
-        this.long_2[18] = 262144L;
-        this.long_2[19] = 524288L;
-        this.long_2[20] = 1048576L;
-        this.long_2[21] = 2097152L;
-        this.long_2[22] = 4194304L;
-        this.long_2[23] = 8388608L;
-        this.long_2[24] = 16777216L;
-        this.long_2[25] = 33554432L;
-        this.long_2[26] = 67108864L;
-        this.long_2[27] = 134217728L;
-        this.long_2[28] = 268435456L;
-        this.long_2[29] = 536870912L;
-        this.long_2[30] = 1073741824L;
-        this.long_0[0] = 1116352408L;
-        this.long_0[1] = 1899447441L;
-        this.long_0[2] = -1245643825L;
-        this.long_0[3] = -373957723L;
-        this.long_0[4] = 961987163L;
-        this.long_0[5] = 1508970993L;
-        this.long_0[6] = -1841331548L;
-        this.long_0[7] = -1424204075L;
-        this.long_0[8] = -670586216L;
-        this.long_0[9] = 310598401L;
-        this.long_0[10] = 607225278L;
-        this.long_0[11] = 1426881987L;
-        this.long_0[12] = 1925078388L;
-        this.long_0[13] = -2132889090L;
-        this.long_0[14] = -1680079193L;
-        this.long_0[15] = -1046744716L;
-        this.long_0[16] = -459576895L;
-        this.long_0[17] = -272742522L;
-        this.long_0[18] = 264347078L;
-        this.long_0[19] = 604807628L;
-        this.long_0[20] = 770255983L;
-        this.long_0[21] = 1249150122L;
-        this.long_0[22] = 1555081692L;
-        this.long_0[23] = 1996064986L;
-        this.long_0[24] = -1740746414L;
-        this.long_0[25] = -1473132947L;
-        this.long_0[26] = -1341970488L;
-        this.long_0[27] = -1084653625L;
-        this.long_0[28] = -958395405L;
-        this.long_0[29] = -710438585L;
-        this.long_0[30] = 113926993L;
-        this.long_0[31] = 338241895L;
-        this.long_0[32] = 666307205L;
-        this.long_0[33] = 773529912L;
-        this.long_0[34] = 1294757372L;
-        this.long_0[35] = 1396182291L;
-        this.long_0[36] = 1695183700L;
-        this.long_0[37] = 1986661051L;
-        this.long_0[38] = -2117940946L;
-        this.long_0[39] = -1838011259L;
-        this.long_0[40] = -1564481375L;
-        this.long_0[41] = -1474664885L;
-        this.long_0[42] = -1035236496L;
-        this.long_0[43] = -949202525L;
-        this.long_0[44] = -778901479L;
-        this.long_0[45] = -694614492L;
-        this.long_0[46] = -200395387L;
-        this.long_0[47] = 275423344L;
-        this.long_0[48] = 430227734L;
-        this.long_0[49] = 506948616L;
-        this.long_0[50] = 659060556L;
-        this.long_0[51] = 883997877L;
-        this.long_0[52] = 958139571L;
-        this.long_0[53] = 1322822218L;
-        this.long_0[54] = 1537002063L;
-        this.long_0[55] = 1747873779L;
-        this.long_0[56] = 1955562222L;
-        this.long_0[57] = 2024104815L;
-        this.long_0[58] = -2067236844L;
-        this.long_0[59] = -1933114872L;
-        this.long_0[60] = -1866530822L;
-        this.long_0[61] = -1538233109L;
-        this.long_0[62] = -1090935817L;
-        this.long_0[63] = -965641998L;
+            this.long_0 = new long[31];
+            this.long_1 = new long[31];
+            this.long_2 = new long[64];
+
+            this.long_0[0] = 1L;
+            this.long_0[1] = 3L;
+            this.long_0[2] = 7L;
+            this.long_0[3] = 15L;
+            this.long_0[4] = 31L;
+            this.long_0[5] = 63L;
+            this.long_0[6] = 127L;
+            this.long_0[7] = 255L;
+            this.long_0[8] = 511L;
+            this.long_0[9] = 1023L;
+            this.long_0[10] = 2047L;
+            this.long_0[11] = 4095L;
+            this.long_0[12] = 8191L;
+            this.long_0[13] = 16383L;
+            this.long_0[14] = 32767L;
+            this.long_0[15] = 65535L;
+            this.long_0[16] = 131071L;
+            this.long_0[17] = 262143L;
+            this.long_0[18] = 524287L;
+            this.long_0[19] = 1048575L;
+            this.long_0[20] = 2097151L;
+            this.long_0[21] = 4194303L;
+            this.long_0[22] = 8388607L;
+            this.long_0[23] = 16777215L;
+            this.long_0[24] = 33554431L;
+            this.long_0[25] = 67108863L;
+            this.long_0[26] = 134217727L;
+            this.long_0[27] = 268435455L;
+            this.long_0[28] = 536870911L;
+            this.long_0[29] = 1073741823L;
+            this.long_0[30] = 2147483647L;
+            this.long_1[0] = 1L;
+            this.long_1[1] = 2L;
+            this.long_1[2] = 4L;
+            this.long_1[3] = 8L;
+            this.long_1[4] = 16L;
+            this.long_1[5] = 32L;
+            this.long_1[6] = 64L;
+            this.long_1[7] = 128L;
+            this.long_1[8] = 256L;
+            this.long_1[9] = 512L;
+            this.long_1[10] = 1024L;
+            this.long_1[11] = 2048L;
+            this.long_1[12] = 4096L;
+            this.long_1[13] = 8192L;
+            this.long_1[14] = 16384L;
+            this.long_1[15] = 32768L;
+            this.long_1[16] = 65536L;
+            this.long_1[17] = 131072L;
+            this.long_1[18] = 262144L;
+            this.long_1[19] = 524288L;
+            this.long_1[20] = 1048576L;
+            this.long_1[21] = 2097152L;
+            this.long_1[22] = 4194304L;
+            this.long_1[23] = 8388608L;
+            this.long_1[24] = 16777216L;
+            this.long_1[25] = 33554432L;
+            this.long_1[26] = 67108864L;
+            this.long_1[27] = 134217728L;
+            this.long_1[28] = 268435456L;
+            this.long_1[29] = 536870912L;
+            this.long_1[30] = 1073741824L;
+            this.long_2[0] = 1116352408L;
+            this.long_2[1] = 1899447441L;
+            this.long_2[2] = -1245643825L;
+            this.long_2[3] = -373957723L;
+            this.long_2[4] = 961987163L;
+            this.long_2[5] = 1508970993L;
+            this.long_2[6] = -1841331548L;
+            this.long_2[7] = -1424204075L;
+            this.long_2[8] = -670586216L;
+            this.long_2[9] = 310598401L;
+            this.long_2[10] = 607225278L;
+            this.long_2[11] = 1426881987L;
+            this.long_2[12] = 1925078388L;
+            this.long_2[13] = -2132889090L;
+            this.long_2[14] = -1680079193L;
+            this.long_2[15] = -1046744716L;
+            this.long_2[16] = -459576895L;
+            this.long_2[17] = -272742522L;
+            this.long_2[18] = 264347078L;
+            this.long_2[19] = 604807628L;
+            this.long_2[20] = 770255983L;
+            this.long_2[21] = 1249150122L;
+            this.long_2[22] = 1555081692L;
+            this.long_2[23] = 1996064986L;
+            this.long_2[24] = -1740746414L;
+            this.long_2[25] = -1473132947L;
+            this.long_2[26] = -1341970488L;
+            this.long_2[27] = -1084653625L;
+            this.long_2[28] = -958395405L;
+            this.long_2[29] = -710438585L;
+            this.long_2[30] = 113926993L;
+            this.long_2[31] = 338241895L;
+            this.long_2[32] = 666307205L;
+            this.long_2[33] = 773529912L;
+            this.long_2[34] = 1294757372L;
+            this.long_2[35] = 1396182291L;
+            this.long_2[36] = 1695183700L;
+            this.long_2[37] = 1986661051L;
+            this.long_2[38] = -2117940946L;
+            this.long_2[39] = -1838011259L;
+            this.long_2[40] = -1564481375L;
+            this.long_2[41] = -1474664885L;
+            this.long_2[42] = -1035236496L;
+            this.long_2[43] = -949202525L;
+            this.long_2[44] = -778901479L;
+            this.long_2[45] = -694614492L;
+            this.long_2[46] = -200395387L;
+            this.long_2[47] = 275423344L;
+            this.long_2[48] = 430227734L;
+            this.long_2[49] = 506948616L;
+            this.long_2[50] = 659060556L;
+            this.long_2[51] = 883997877L;
+            this.long_2[52] = 958139571L;
+            this.long_2[53] = 1322822218L;
+            this.long_2[54] = 1537002063L;
+            this.long_2[55] = 1747873779L;
+            this.long_2[56] = 1955562222L;
+            this.long_2[57] = 2024104815L;
+            this.long_2[58] = -2067236844L;
+            this.long_2[59] = -1933114872L;
+            this.long_2[60] = -1866530822L;
+            this.long_2[61] = -1538233109L;
+            this.long_2[62] = -1090935817L;
+            this.long_2[63] = -965641998L;
+
         }
 
         private long method_0(long long_2, int int_0)
@@ -222,7 +227,7 @@ namespace SPC
             return num;
         }
 
-    private long method_2(long long_3, int int_0)
+        private long method_2(long long_3, int int_0)
         {
             long num = long_3 & -2147483648L;
             long num2 = int_0 & -2147483648;
@@ -244,43 +249,44 @@ namespace SPC
             return ((num5 ^ num) ^ num2);
         }
 
-    private long method_3(long long_3, long long_4, long long_5)
+        private long method_3(long long_3, long long_4, long long_5)
         {
             return ((long_3 & long_4) ^ (~long_3 & long_5));
         }
 
-    private long method_4(long long_3, long long_4, long long_5)
+        private long method_4(long long_3, long long_4, long long_5)
         {
             return (((long_3 & long_4) ^ (long_3 & long_5)) ^ (long_4 & long_5));
-        }  
+        }
 
-    private long method_5(long long_3, int int_0)
+        private long method_5(long long_3, int int_0)
         {
             return (this.method_1(long_3, int_0 & ((int) this.long_1[4])) | 
                 this.method_0(long_3, (int) (32L - (int_0 & this.long_1[4]))));
         }
 
-    private long method_6(long long_3, int int_0)
+        private long method_6(long long_3, int int_0)
         {
             return this.method_1(long_3, int_0 & ((int) this.long_1[4]));
         }
 
-    private long method_7(long long_3)
+        private long method_7(long long_3)
         {
             return ((this.method_5(long_3, 2) ^ this.method_5(long_3, 13)) ^ this.method_5(long_3, 22));
         }
- 
-    private long method_8(long long_3)
+
+        private long method_8(long long_3)
         {
             return ((this.method_5(long_3, 6) ^ this.method_5(long_3, 11)) ^ this.method_5(long_3, 25));
         }
 
-    private long method_9(long long_3)
-    {
-        return ((this.method_5(long_3, 7) ^ this.method_5(long_3, 18)) ^ this.method_6(long_3, 3));
-    }
+        private long method_9(long long_3)
+        {
+            return ((this.method_5(long_3, 7) ^ this.method_5(long_3, 
+                18)) ^ this.method_6(long_3, 3));
+        }
 
-    public string SHAsha(ref string sMessage)
+        public string SHAsha(ref string sMessage)
         {
             long[] numArray = new long[8];
             long[] numArray1 = new long[64];
